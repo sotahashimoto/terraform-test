@@ -41,7 +41,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        cd terraform-test/terraform/environments/stage
+        cd /terraform-test/terraform/environments/stage
 
     - name: Terraform Init
       run: terraform init
