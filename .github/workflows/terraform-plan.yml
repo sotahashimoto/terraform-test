@@ -44,5 +44,5 @@ jobs:
       working-directory: terraform
  
     - name: Terraform Plan
-      run: terraform plann
+      run: terraform plan
       working-directory: terraform
