@@ -7,10 +7,6 @@ on:
     branches: [ "stage" ]
 
 jobs:
-  - name: set ROLE
-    run: |
-      echo "AWS_ROLE_ARN=$" >> $GITHUB_ENV
-
   terraform:
     name: terraform
     runs-on: ubuntu-latest
