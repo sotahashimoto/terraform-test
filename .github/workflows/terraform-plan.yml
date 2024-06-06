@@ -19,7 +19,6 @@ jobs:
       run:
         working-directory: terraform/environments/stage
 
- 
     steps:
 #    - name: set ROLE
 #      run: |
@@ -45,5 +44,5 @@ jobs:
       working-directory: terraform
  
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan --input=false
       working-directory: terraform
