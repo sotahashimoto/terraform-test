@@ -10,8 +10,15 @@ jobs:
   terraform:
     name: terraform
     runs-on: ubuntu-latest
-
+    permissions:
+      id-token: write
+      contents: read
+ 
     steps:
+    - name: set ROLE
+      run: |
+        echo "AWS_ROLE_ARN=$" >> $GITHUB_ENV
+
     - name: Checkout
       uses: actions/checkout@v4
 
@@ -34,8 +41,10 @@ jobs:
       with:
         terraform_version: ${{ steps.terraform-version.outputs.terraform-version }}
 
-    - name: init
+    - name: Terraform Init
       run: terraform init
-
-    - name: plan
+      working-directory: terraform
+ 
+    - name: Terraform Plan
       run: terraform plan
+      working-directory: terraform
