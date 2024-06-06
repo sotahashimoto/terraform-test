@@ -15,9 +15,9 @@ jobs:
     permissions:
       id-token: write
       contents: read
-#    defaults:
-#      run:
-#        working-directory: terraform/environments/stage
+    defaults:
+      run:
+        working-directory: terraform/environments/stage
 
  
     steps:
