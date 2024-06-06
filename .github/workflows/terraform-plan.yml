@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - stage
-    paths:
-      - "terraform/*"
-      - ".github/*"
+#    paths:
+#      - "terraform/*"
+#      - ".github/*"
 
 jobs:
   terraform:
@@ -34,7 +34,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
         aws-region: ap-northeast-1
 
-    # terraformのバージョンを指定a
+    # terraformのバージョンを指定
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
