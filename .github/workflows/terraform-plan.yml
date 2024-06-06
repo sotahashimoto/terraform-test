@@ -17,7 +17,7 @@ jobs:
       contents: read
 #    defaults:
 #      run:
-#        working-directory: terraform/environments/main
+#        working-directory: terraform/environments/stage
 
  
     steps:
