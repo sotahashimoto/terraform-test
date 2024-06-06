@@ -17,7 +17,7 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: terraform/environments/stage
+        working-directory: ./terraform/environments/stage
 
     steps:
 #    - name: set ROLE
