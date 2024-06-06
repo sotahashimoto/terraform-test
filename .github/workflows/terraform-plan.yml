@@ -2,11 +2,14 @@ name: 'Terraform Plan'
 
 on:
   push:
-    branches: [ "stage" ]
-  pull_request:
-    branches: [ "stage" ]
+    branches:
+      - stage
 
 jobs:
+  - name: set ROLE
+    run: |
+      echo "AWS_ROLE_ARN=$" >> $GITHUB_ENV
+
   terraform:
     name: terraform
     runs-on: ubuntu-latest
