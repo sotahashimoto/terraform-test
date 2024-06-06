@@ -44,5 +44,5 @@ jobs:
       working-directory: terraform
  
     - name: Terraform Plan
-      run: terraform plan --input=false
+      run: terraform plann
       working-directory: terraform
