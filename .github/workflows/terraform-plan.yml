@@ -2,10 +2,9 @@ name: 'Terraform Plan'
 
 on:
   push:
-    branches:
-      - "stage"
-    pull_request:
-      - "stage"
+    branches: [ "stage" ]
+  pull_request:
+    branches: [ "stage" ]
 
 jobs:
   - name: set ROLE
