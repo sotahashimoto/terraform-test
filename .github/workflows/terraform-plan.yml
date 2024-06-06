@@ -15,10 +15,6 @@ jobs:
       contents: read
  
     steps:
-    - name: set ROLE
-      run: |
-        echo "AWS_ROLE_ARN=$" >> $GITHUB_ENV
-
     - name: Checkout
       uses: actions/checkout@v4
 
