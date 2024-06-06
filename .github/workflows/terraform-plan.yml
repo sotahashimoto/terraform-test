@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - stage
-#    paths:
-#      - "terraform/*"
-#      - ".github/*"
+    paths:
+      - "terraform/**"
+      - ".github/**"
 
 jobs:
   terraform:
