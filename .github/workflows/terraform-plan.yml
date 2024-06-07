@@ -11,7 +11,7 @@ on:
 
 jobs:
   terraform:
-    name: terraform
+    name: terraform plan
     runs-on: ubuntu-latest
     permissions:
       id-token: write
