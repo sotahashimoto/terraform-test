@@ -19,7 +19,7 @@ jobs:
     defaults:
       run:
         # terraform実行ディレクトリ
-        working-directory: ./terraform/environments/${{ github.base_ref }}
+        working-directory: ./terraform/environments/${{ github.ref_name }}
 
     steps:
     - name: Checkout
