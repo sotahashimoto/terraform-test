@@ -5,7 +5,7 @@ on:
     branches:
       - stage
     paths:
-      - "./terraform/environments/stage"
+      - "terraform/**"
 
 jobs:
   terraform:
@@ -32,7 +32,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
         aws-region: ap-northeast-1
 
-    # terraformのバージョンを指定.
+    # terraformのバージョンを指定
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
