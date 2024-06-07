@@ -1,4 +1,4 @@
-name: 'Terraform Plan'
+name: 'Terraform Apply'
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       contents: read
     defaults:
       run:
-        # terraformの実行ディレクトリを指定
+        # terraform実行ディレクトリ
         working-directory: ./terraform/environments/${{ github.base_ref }}
 
     steps:
@@ -40,5 +40,5 @@ jobs:
     - name: Terraform Init
       run: terraform init
  
-    - name: Terraform Plan
-      run: terraform plan
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
