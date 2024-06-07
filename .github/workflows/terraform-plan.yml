@@ -5,8 +5,7 @@ on:
     branches:
       - stage
     paths:
-      - "terraform/**"
-      - ".github/**"
+      - ./terraform/environments/stage
 
 jobs:
   terraform:
