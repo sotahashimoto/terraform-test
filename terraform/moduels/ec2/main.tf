@@ -21,14 +21,14 @@ resource "aws_security_group_rule" "this" {
   dynamic "source_security_group_id" {
     for_each = each.value[4] != null ? [each.value[4]] : []
     content {
-      source_security_group_id = source_security_group_id.value
+      source_security_group_id = source_security_group_id.value[4]
     }
   }
 
   dynamic "cidr_blocks" {
     for_each = length(each.value[5]) > 0 ? [each.value[5]] : []
     content {
-      cidr_blocks = cidr_blocks.value
+      cidr_blocks = cidr_blocks.value[5]
     }
   }
 }
