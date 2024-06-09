@@ -16,8 +16,6 @@ resource "aws_security_group_rule" "this" {
   from_port                = each.value[1]
   to_port                  = each.value[2]
   protocol                 = each.value[3]
-  source_security_group_id = each.value[4]
-  cidr_blocks              = each.value[5]
   description              = each.value[6]
 
   dynamic "source_security_group_id" {
