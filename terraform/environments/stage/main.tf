@@ -8,6 +8,6 @@ module "vpc" {
 
 module "ec2" {
   source  = "../../moduels/ec2"
-  sg_rule = local.map.sg_rule
+  sg_rule = local.sg_rule
   vpc_id  = module.vpc.vpc_id
 }
