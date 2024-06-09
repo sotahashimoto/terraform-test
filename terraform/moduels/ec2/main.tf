@@ -9,7 +9,7 @@ resource "aws_security_group" "this" {
 }
 
 resource "aws_security_group_rule" "this" {
-  for_each                 = var.sg_rule
+  for_each = var.sg_rule
 
   security_group_id        = aws_security_group.this.id
   type                     = each.value[0]
