@@ -8,8 +8,8 @@ variable "sg_rule" {
     from_port                = number
     to_port                  = number
     protocol                 = string
-    source_security_group_id = string
-    cidr_blocks              = string
+    source_security_group_id = optional(string)
+    cidr_blocks              = optional(string)
     description              = string
   })
 }
