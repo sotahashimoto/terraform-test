@@ -19,4 +19,18 @@ resource "aws_security_group_rule" "this" {
   source_security_group_id = each.value[4]
   cidr_blocks              = each.value[5]
   description              = each.value[6]
+
+  dynamic "source_security_group_id" {
+    for_each = each.value[4] != null ? [each.value[4]] : []
+    content {
+      source_security_group_id = source_security_group_id.value
+    }
+  }
+
+  dynamic "cidr_blocks" {
+    for_each = length(each.value[5]) > 0 ? [each.value[5]] : []
+    content {
+      cidr_blocks = cidr_blocks.value
+    }
+  }
 }
