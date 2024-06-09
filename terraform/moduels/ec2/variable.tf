@@ -3,7 +3,7 @@ variable "sg_rule" { type = map(any) }
 
 
 variable "sg_rule" {
-  type = list(object({
+  type = object({
     type                     = string
     from_port                = number
     to_port                  = number
@@ -11,5 +11,5 @@ variable "sg_rule" {
     source_security_group_id = string
     cidr_blocks              = string
     description              = string
-  }))
+  })
 }
