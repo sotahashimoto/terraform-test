@@ -2,6 +2,10 @@ resource "aws_security_group" "this" {
   vpc_id      = var.vpc_id
   description = "For test"
   name        = "test-sg"
+
+  tags = {
+    Name = "test-sg"
+  }
 }
 
 resource "aws_security_group_rule" "this" {
