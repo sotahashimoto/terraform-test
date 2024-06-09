@@ -12,4 +12,5 @@ variable "sg_rule" {
     cidr_blocks              = set(string)
     description              = string
   }))
+  default = []
 }
