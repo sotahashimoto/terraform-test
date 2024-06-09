@@ -7,7 +7,7 @@ variable "sg_rule" {
     to_port                  = number
     protocol                 = string
     source_security_group_id = optional(string)
-    cidr_blocks              = optional(string)
+    cidr_blocks              = list(string)
     description              = string
   })
 }
