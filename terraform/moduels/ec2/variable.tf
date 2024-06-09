@@ -1,7 +1,7 @@
 variable "vpc_id" { type = string }
 
 variable "sg_rule" {
-  type = object({
+  type = map(object({
     type                     = string
     from_port                = number
     to_port                  = number
@@ -9,5 +9,5 @@ variable "sg_rule" {
     source_security_group_id = optional(string)
     cidr_blocks              = list(string)
     description              = string
-  })
+  }))
 }
