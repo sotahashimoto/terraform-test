@@ -4,7 +4,6 @@ variable "sg_rule" { type = map(any) }
 
 variable "sg_rule" {
   type = map(object({
-    name = string
     type                     = string
     from_port                = number
     to_port                  = number
