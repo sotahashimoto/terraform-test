@@ -1,5 +1,2 @@
 variable "vpc_id" { type = string }
-
-variable "sg_rule" {
-
-}
+variable "sg_rule" {}
